@@ -1,0 +1,3 @@
+id,effect1,effect2,
+1,give 1 card, give 1 MC
+2,give 1 plant, give 2 MC
