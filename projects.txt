@@ -1,0 +1,2 @@
+name,cost,requirement,tags,color,effect,production,capability,action,active_phases,ability,victory_points,card_number
+Community Gardens,NONE,PLANT,NONE,NONE,BLUE,NONE,NONE,NONE,Gain 2 MC,
