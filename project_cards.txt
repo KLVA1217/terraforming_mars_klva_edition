@@ -1,0 +1,40 @@
+name: Community Gardens
+    cost: 20
+    requirement: NONE 
+    tag1: PLANTS
+    tag2: NONE
+    tag3: NONE
+    color: Blue
+    effect: NONE
+    production: NONE
+    capability: NONE
+    action1: Gain 2 MC. 
+    action2: *If you chose this action phase round, also gain 1 plant.
+    action3: NONE
+    active_phase1: 3
+    active_phase2: NONE
+    ability1: NONE
+    ability2: NONE
+    ability3: NONE
+    victory_points: NONE
+    card_number: 16
+name: Comet
+    cost: 25
+    requirement: NONE 
+    tag1: TITANIUM
+    tag2: EVENT
+    tag3: NONE
+    color: Blue
+    effect: NONE
+    production: NONE
+    capability: NONE
+    action1: NONE
+    action2: NONE
+    actoin3: NONE
+    active_phase1: NONE
+    active_phase2: NONE
+    ability1: Raise the temperature 1 step
+    ability2: Flip an ocean tile
+    ability3: NONE
+    victory_points: NONE
+    card_number: 73
