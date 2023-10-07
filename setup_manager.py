@@ -21,20 +21,18 @@ class setup_manager:
             name = line_split[0].strip()
             value = line_split[1].strip()
 
+            ocean_tile_effects_current = []
+
             if(name == "id"):
-                ocean_tile_id_current = line_split[0]
+                ocean_tile_id_current = value.strip()
 
-            elif(name == "effects"):
-                effects = value.split(",")
+            elif(name == "effect1"):
+                ocean_tile_effect1_current = value.strip()                
 
-                ocean_tile_effect1_current = effects[0].strip()
-                ocean_tile_effect2_current = effects[1].strip()
-
-                ocean_tile_effects_current = [ocean_tile_effect1_current, ocean_tile_effect2_current]
-
-                ocean_tiles.append(ocean_tile(ocean_tile_id_current,ocean_tile_effects_current))
+            elif(name == "effect2"):
+                ocean_tile_effect2_current = value.strip()
+                ocean_tiles.append(ocean_tile(ocean_tile_id_current,ocean_tile_effect1_current,ocean_tile_effect2_current))
 
         #Set up project cards
 
         return [temperature, oxygen, terraforming_rating, ocean_tiles]
-    

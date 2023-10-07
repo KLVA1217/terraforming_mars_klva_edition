@@ -1,5 +1,9 @@
 id: 1
-    effects: give 1 card, give 1 MC
+    effect1: give 1 card
+    effect2: give 1 MC
 id: 2
-    effects: give 1 plant, give 2 MC
+    effect1: give 1 plant
+    effect2: give 2 MC
 id: 3
+    effect1: give 1 card
+    effect2: NONE

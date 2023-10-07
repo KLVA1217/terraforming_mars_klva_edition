@@ -6,3 +6,4 @@ class game_manager:
         print("\tOxygen: " + str(oxygen) + " %")
         print("\tTerraforming Rating: " + str(terraforming_rating))
         print("\tOcean Tiles: " + str(len(ocean_tiles)))
+        print("\n")
