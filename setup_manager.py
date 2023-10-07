@@ -1,5 +1,6 @@
 from ocean_tile import *
 from project_card import *
+import random
 
 class setup_manager:
 
@@ -90,6 +91,15 @@ class setup_manager:
             elif(name == "active_phase2"):
                 project_card_active_phase2_current = value.strip()
 
+            elif(name == "active_phase3"):
+                project_card_active_phase3_current = value.strip()
+
+            elif(name == "active_phase4"):
+                project_card_active_phase4_current = value.strip()
+
+            elif(name == "active_phase5"):
+                project_card_active_phase5_current = value.strip()
+
             elif(name == "ability1"):
                 project_card_ability1_current = value.strip()
 
@@ -102,8 +112,18 @@ class setup_manager:
             elif(name == "victory_points"):
                 project_card_victory_points_current = value.strip()
 
-            elif(name == "card_number"):
+            elif(name == "card_number" and value != "XX"):
                 project_card_card_number_current = value.strip()
-                project_cards.append(project_card(project_card_name_current, project_card_cost_current, project_card_requirement_current, project_card_tag1_current, project_card_tag2_current, project_card_tag3_current, project_card_color_current, project_card_effect_current, project_card_production_current, project_card_capability_current, project_card_action1_current, project_card_action2_current, project_card_action3_current, project_card_active_phase1_current, project_card_active_phase2_current, project_card_ability1_current, project_card_ability2_current, project_card_ability3_current, project_card_victory_points_current, project_card_card_number_current))
+                project_cards.append(project_card(project_card_name_current, project_card_cost_current, project_card_requirement_current, project_card_tag1_current, project_card_tag2_current, project_card_tag3_current, project_card_color_current, project_card_effect_current, project_card_production_current, project_card_capability_current, project_card_action1_current, project_card_action2_current, project_card_action3_current, project_card_active_phase1_current, project_card_active_phase2_current, project_card_active_phase3_current, project_card_active_phase4_current, project_card_active_phase5_current, project_card_ability1_current, project_card_ability2_current, project_card_ability3_current, project_card_victory_points_current, project_card_card_number_current))
 
-        return [temperature, oxygen, terraforming_rating, ocean_tiles, project_cards]
+        # Set up player hand
+        player_hand = []
+        for int in range(8):
+            number_of_project_cards = len(project_cards) - 1
+
+            random_number = random.randint(0, number_of_project_cards)
+
+            player_hand.append(project_cards[random_number])
+            project_cards.remove(project_cards[random_number])
+
+        return [temperature, oxygen, terraforming_rating, ocean_tiles, project_cards, player_hand]

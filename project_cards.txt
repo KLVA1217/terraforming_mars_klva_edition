@@ -8,20 +8,92 @@ name: Community Gardens
     effect: NONE
     production: NONE
     capability: NONE
-    action1: Gain 2 MC. 
-    action2: *If you chose this action phase round, also gain 1 plant.
+    action1: Gain 2 MC
+    action2: *If you chose this action phase round, also gain 1 plant
     action3: NONE
-    active_phase1: 3
-    active_phase2: NONE
+    active_phase1: 
+    active_phase2: 
+    active_phase3:
+    active_phase4:
+    active_phase5: 
     ability1: NONE
     ability2: NONE
     ability3: NONE
     victory_points: NONE
     card_number: 16
+name: Composting Factory
+    cost: 13
+    requirement: NONE 
+    tag1: BUILDING
+    tag2: NONE
+    tag3: NONE
+    color: Blue
+    effect: Cards you discard for MC are worth an additional 1 MC
+    production: NONE
+    capability: NONE
+    action1: NONE 
+    action2: NONE
+    action3: NONE
+    active_phase1: TRUE
+    active_phase2: TRUE
+    active_phase3: TRUE
+    active_phase4: TRUE
+    active_phase5: FALSE
+    ability1: NONE
+    ability2: NONE
+    ability3: NONE
+    victory_points: NONE
+    card_number: 17
+name: Energy Subsidies
+    cost: 5
+    requirement: NONE 
+    tag1: SPACE
+    tag2: NONE
+    tag3: NONE
+    color: Blue
+    effect: When you play a POWER, you pay 4 MC less for it and you draw a card
+    production: NONE
+    capability: NONE
+    action1: NONE 
+    action2: NONE
+    action3: NONE
+    active_phase1: TRUE
+    active_phase2: TRUE
+    active_phase3: FALSE
+    active_phase4: FALSE
+    active_phase5: FALSE
+    ability1: NONE
+    ability2: NONE
+    ability3: NONE
+    victory_points: NONE
+    card_number: 25
+name: Hydro-Electric Energy
+    cost: 11
+    requirement: NONE 
+    tag1: BUILDING
+    tag2: NONE
+    tag3: NONE
+    color: Blue
+    effect: NONE
+    production: NONE
+    capability: NONE
+    action1: Spend 1 MC to gain 2 heat
+    action2: If you chose this action phase this round, gain 1 additional heat
+    action3: NONE
+    active_phase1: FALSE
+    active_phase2: FALSE
+    active_phase3: TRUE
+    active_phase4: FALSE
+    active_phase5: FALSE
+    ability1: NONE
+    ability2: NONE
+    ability3: NONE
+    victory_points: NONE
+    card_number: 34
 name: Comet
     cost: 25
     requirement: NONE 
-    tag1: TITANIUM
+    tag1: SPACE
     tag2: EVENT
     tag3: NONE
     color: Blue
@@ -31,10 +103,197 @@ name: Comet
     action1: NONE
     action2: NONE
     actoin3: NONE
-    active_phase1: NONE
-    active_phase2: NONE
+    active_phase1: FALSE
+    active_phase2: FALSE
+    active_phase3: FALSE
+    active_phase4: FALSE
+    active_phase5: FALSE
     ability1: Raise the temperature 1 step
     ability2: Flip an ocean tile
     ability3: NONE
     victory_points: NONE
     card_number: 73
+name: Convoy from Europa
+    cost: 14
+    requirement: NONE 
+    tag1: SPACE
+    tag2: EVENT
+    tag3: NONE
+    color: Red
+    effect: NONE
+    production: NONE
+    capability: NONE
+    action1: NONE 
+    action2: NONE
+    action3: NONE
+    active_phase1: FALSE
+    active_phase2: FALSE
+    active_phase3: FALSE
+    active_phase4: FALSE
+    active_phase5: FALSE
+    ability1: Draw a card
+    ability2: Flip an ocean tile
+    ability3: NONE
+    victory_points: NONE
+    card_number: 74
+name: Invention Contest
+    cost: 1
+    requirement: NONE 
+    tag1: SCIENCE
+    tag2: EVENT
+    tag3: NONE
+    color: Red
+    effect: NONE
+    production: NONE
+    capability: NONE
+    action1: NONE 
+    action2: NONE
+    action3: NONE
+    active_phase1: FALSE
+    active_phase2: FALSE
+    active_phase3: FALSE
+    active_phase4: FALSE
+    active_phase5: FALSE
+    ability1: Draw three cards. Keep one of them and discard the other two
+    ability2: NONE
+    ability3: NONE
+    victory_points: NONE
+    card_number: 83
+name: Lagrange Observatory
+    cost: 7
+    requirement: NONE 
+    tag1: SCIENCE
+    tag2: SPACE
+    tag3: EVENT
+    color: Red
+    effect: NONE
+    production: NONE
+    capability: NONE
+    action1: NONE 
+    action2: NONE
+    action3: NONE
+    active_phase1: FALSE
+    active_phase2: FALSE
+    active_phase3: FALSE
+    active_phase4: FALSE
+    active_phase5: FALSE
+    ability1: Draw a card
+    ability2: NONE
+    ability3: NONE
+    victory_points: 1
+    card_number: 85
+name: Fusion Power
+    cost: 7
+    requirement: 2 ENERGY
+    tag1: SCIENCE
+    tag2: BUILDING
+    tag3: ENERGY
+    color: Green
+    effect: NONE
+    production: 1 CARD
+    capability: NONE
+    action1: NONE 
+    action2: NONE
+    action3: NONE
+    active_phase1: FALSE
+    active_phase2: FALSE
+    active_phase3: FALSE
+    active_phase4: TRUE
+    active_phase5: FALSE
+    ability1: NONE
+    ability2: NONE
+    ability3: NONE
+    victory_points: NONE
+    card_number: 137
+name: Immigration Shuttles
+    cost: 20
+    requirement: NONE 
+    tag1: SPACE
+    tag2: NONE
+    tag3: NONE
+    color: Green
+    effect: NONE
+    production: 3 MC
+    capability: NONE
+    action1: NONE 
+    action2: NONE
+    action3: NONE
+    active_phase1: FALSE
+    active_phase2: FALSE
+    active_phase3: FALSE
+    active_phase4: TRUE
+    active_phase5: FALSE
+    ability1: NONE
+    ability2: NONE
+    ability3: NONE
+    victory_points: 1 per 2 EARTH
+    card_number: 146
+name: Industrial Microbes
+    cost: 9
+    requirement: NONE 
+    tag1: BUILDING
+    tag2: MICROBE
+    tag3: NONE
+    color: NONE
+    effect: NONE
+    production: 1 HEAT
+    capability: 1 STEEL
+    action1: NONE 
+    action2: NONE
+    action3: NONE
+    active_phase1: TRUE
+    active_phase2: TRUE
+    active_phase3: FALSE
+    active_phase4: TRUE
+    active_phase5: FALSE
+    ability1: NONE
+    ability2: NONE
+    ability3: NONE
+    victory_points: NONE
+    card_number: 151
+name: Quantam Extractor
+    cost: 16
+    requirement: 3 SCIENCE 
+    tag1: SCIENCE
+    tag2: BUILDING
+    tag3: ENERGY
+    color: Green
+    effect: NONE
+    production: 3 HEAT
+    capability: NONE
+    action1: NONE 
+    action2: NONE
+    action3: NONE
+    active_phase1: TRUE
+    active_phase2: TRUE
+    active_phase3: FALSE
+    active_phase4: FALSE
+    active_phase5: FALSE
+    ability1: NONE
+    ability2: NONE
+    ability3: NONE
+    victory_points: NONE
+    card_number: 178
+name: NONE
+    cost: NONE
+    requirement: NONE 
+    tag1: NONE
+    tag2: NONE
+    tag3: NONE
+    color: NONE
+    effect: NONE
+    production: NONE
+    capability: NONE
+    action1: NONE 
+    action2: NONE
+    action3: NONE
+    active_phase1: FALSE
+    active_phase2: FALSE
+    active_phase3: FALSE
+    active_phase4: FALSE
+    active_phase5: FALSE
+    ability1: NONE
+    ability2: NONE
+    ability3: NONE
+    victory_points: NONE
+    card_number: XX
