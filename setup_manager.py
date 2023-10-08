@@ -1,6 +1,7 @@
 from ocean_tile import *
 from project_card import *
 import random
+from corporation_card import *
 
 class setup_manager:
 
@@ -126,4 +127,71 @@ class setup_manager:
             player_hand.append(project_cards[random_number])
             project_cards.remove(project_cards[random_number])
 
-        return [temperature, oxygen, terraforming_rating, ocean_tiles, project_cards, player_hand]
+        # Set up corporations
+        corporation_cards = []
+
+        file_to_read = "coporation_cards.txt"
+        f = open(file_to_read, "r")
+        lines = f.readlines()
+
+        for line in lines:
+            line_split = line.split(":")
+
+            name = line_split[0].strip()
+            value = line_split[1].strip()
+
+            # name, tag1, tag2, mc, production, capability, cards, effect, action, card_number
+
+            if(name == "name"):
+                corporation_card_name_current = value.strip()         
+
+            elif(name == "tag1"):
+                corporation_card_tag1_current = value.strip()
+
+            elif(name == "tag2"):
+                corporation_card_tag2_current = value.strip()
+
+            elif(name == "mc"):
+                corporation_card_mc_current = value.strip()
+
+            elif(name == "production"):
+                corporation_card_production_current = value.strip()
+
+            elif(name == "capability"):
+                corporation_card_capability_current = value.strip()
+
+            elif(name == "cards"):
+                corporation_card_cards_current = value.strip()
+
+            elif(name == "effect"):
+                corporation_card_effect_current = value.strip()
+
+            elif(name == "action"):
+                corporation_card_action_current = value.strip()
+
+            elif(name == "card_number" and value != "XX"):
+                corporation_card_card_number_current = value.strip()
+                corporation_cards.append(corporation_card(corporation_card_name_current, corporation_card_tag1_current, corporation_card_tag2_current, corporation_card_mc_current, corporation_card_production_current, corporation_card_capability_current, corporation_card_cards_current, corporation_card_effect_current, corporation_card_action_current, corporation_card_card_number_current))
+
+        # Set up player corporation
+        corporation_cards_player_options = []
+        for int in range(2):
+            number_of_corporation_cards = len(corporation_cards) - 1
+
+            random_number = random.randint(0, number_of_corporation_cards)
+
+            corporation_cards_player_options.append(corporation_cards[random_number])
+            corporation_cards.remove(corporation_cards[random_number])        
+
+        for card in corporation_cards_player_options:
+            card.print_stats()
+
+        # print("Select one corporation card from the above, enter the card number to select it and continue on.")
+
+        player_corporation_choice = input("Select one corporation card from the above, enter the card number to select it and continue on.\n")
+
+        for card in corporation_cards_player_options:
+            if card.card_number == player_corporation_choice:
+                player_corporation = card
+
+        return [temperature, oxygen, terraforming_rating, ocean_tiles, project_cards, player_hand, player_corporation]

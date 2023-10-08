@@ -1,6 +1,6 @@
 class game_manager:
 
-    def print_current_status(temperature, oxygen, terraforming_rating, ocean_tiles, project_cards, player_hand):
+    def print_current_status(temperature, oxygen, terraforming_rating, ocean_tiles, project_cards, player_hand, player_corporation):
         print("Current Game Status:")
         print("\tTemperature: " + str(temperature) + " C")
         print("\tOxygen: " + str(oxygen) + " %")
@@ -10,6 +10,7 @@ class game_manager:
 
         print("Player Status:")
         print("\tNumber of Cards in Player Hand: " + str(len(player_hand)))
+        print("\tCorporation: " + player_corporation.name)
         
         print("\n")
 
