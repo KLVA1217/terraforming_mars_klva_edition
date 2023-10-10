@@ -1,0 +1,50 @@
+name: CREDICOR
+    tag1: NONE
+    tag2: NONE
+    mc: 48
+    production: NONE
+    capability: NONE
+    cards: NONE
+    effect: When you play a card with a printed cost of 20 MC or more you pay 4 MC less for it.
+    action: NONE
+    card_number: 209
+name: TERACTOR
+    tag1: EARTH
+    tag2: NONE
+    mc: 51
+    production: NONE
+    capability: NONE
+    cards: NONE
+    effect: When you play an EARTH, you pay 3 MC less for it.
+    action: NONE
+    card_number: 217
+name: THARSIS REPUBLIC
+    tag1: NONE
+    tag2: NONE
+    mc: 40
+    production: NONE
+    capability: NONE
+    cards: NONE
+    effect: When you draw cards during the research phase, draw one additional CARD and keep one additional CARD.
+    action: NONE
+    card_number: 218
+name: THORGATE
+    tag1: ENERGY
+    tag2: NONE
+    mc: 45
+    production: 1 HEAT
+    capability: NONE
+    cards: NONE
+    effect: When you play a ENERGY, you pay 3 MC less for it.
+    action: NONE
+    card_number: 219
+name: NONE
+    tag1: NONE
+    tag2: NONE
+    mc: NONE
+    production: NONE
+    capability: NONE
+    cards: NONE
+    effect: NONE
+    action: NONE
+    card_number: XX

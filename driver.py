@@ -1,42 +1,16 @@
-from ocean_tile import *
-
-###FUNCTIONS######FUNCTIONS######FUNCTIONS######FUNCTIONS######FUNCTIONS######FUNCTIONS######FUNCTIONS######FUNCTIONS######FUNCTIONS######FUNCTIONS######FUNCTIONS###
-
-def print_current_status():
-    print("Current Status:")
-    print("\tTemperature: " + str(temperature) + " C")
-    print("\tOxygen: " + str(oxygen) + " %")
-    print("\tTerraforming Rating: " + str(terraforming_rating))
-    print("\tOcean Tiles: " + str(len(ocean_tiles)))
-
-###FUNCTIONS######FUNCTIONS######FUNCTIONS######FUNCTIONS######FUNCTIONS######FUNCTIONS######FUNCTIONS######FUNCTIONS######FUNCTIONS######FUNCTIONS######FUNCTIONS###
+from setup_manager import *
+from game_manager import *
 
 #Setup initial values
-temperature = -30
-oxygen = 0
-terraforming_rating = 5
 
-#Setup ocean tiles
-ocean_tiles = []
+setup_instance = setup_manager.standard_setup()
 
-file_to_read = "ocean_tiles.txt"
-f = open(file_to_read, "r")
-lines = f.readlines()
+temperature = setup_instance[0]
+oxygen = setup_instance[1]
+terraforming_rating = setup_instance[2]
+ocean_tiles = setup_instance[3]
+project_cards = setup_instance[4]
+player_hand = setup_instance[5]
+player_corporation = setup_instance[6]
 
-for line in lines:
-    # print(line, end="")
-
-    line_split = line.split(",")
-
-    if(line_split[0] != "id"):
-        ocean_tile_id_current = line_split[0]
-        ocean_tile_effect1_current = line_split[1]
-        ocean_tile_effect2_current = line_split[2]
-
-        ocean_tile_effects_current = [ocean_tile_effect1_current, ocean_tile_effect2_current]
-
-        ocean_tiles.append(ocean_tile(ocean_tile_id_current,ocean_tile_effects_current))
-
-print("\n")
-
-print_current_status()
+game_manager.print_current_status(temperature, oxygen, terraforming_rating, ocean_tiles, project_cards, player_hand, player_corporation)
