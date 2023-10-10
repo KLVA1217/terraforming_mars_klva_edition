@@ -12,6 +12,7 @@ class corporation_card:
         self.card_number = card_number
 
     def print_stats(self):
+        print("=======================================================================================================")
         print("Name: " + self.name)
 
         tags_array = []
@@ -41,5 +42,3 @@ class corporation_card:
             print("\tAction: " + self.action)
 
         print("\tCard Number: " + self.card_number)
-
-        print("\n")

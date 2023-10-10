@@ -1,9 +1,12 @@
 id: 1
-    effect1: give 1 card
-    effect2: give 1 MC
+    cards: 0
+    plants: 0 
+    mega_credits: 4
 id: 2
-    effect1: give 1 plant
-    effect2: give 2 MC
+    cards: 1
+    plants: 0
+    mega_credits: 0
 id: 3
-    effect1: give 1 card
-    effect2: NONE
+    cards: 1
+    plants: 0
+    mega_credits: 1

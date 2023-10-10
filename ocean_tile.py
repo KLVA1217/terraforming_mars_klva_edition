@@ -1,12 +1,20 @@
 class ocean_tile:
 
-        def __init__(self, id, effect1, effect2): 
-            self.id = id
-            self.effect1 = effect1
-            self.effect2 = effect2
+        def __init__(self, id, cards, plants, mega_credits): 
+            self.id = id 
+            self.cards = cards
+            self.plants = plants
+            self.mega_credits = mega_credits
 
         def print_stats(self):
+            print("=======================================================================================================")
             print("Ocean Tile Number " + self.id)
-            print("1st Effect: " + self.effect1)
-            print("2nd Effect: " + self.effect2)
-            print("\n")
+
+            if (int(self.cards) > 0):
+                 print("\tCards to give: " + self.cards)
+
+            if (int(self.plants) > 0):
+                 print("\tPlants to give: " + self.plants)
+
+            if (int(self.mega_credits) > 0):
+                 print("\tMega Credits to give: " + self.mega_credits)

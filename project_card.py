@@ -25,6 +25,7 @@ class project_card:
             self.card_number = card_number
 
         def print_stats(self):
+            print("=======================================================================================================")
             print("Name: " + self.name)
 
             print("\tCost: " + self.cost)
